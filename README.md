@@ -1,3 +1,3 @@
-Repozytorium zostało utworzone w ramach przedmiotu 'Projekt zespołowy - Implementacja'.
+DietBox 
 
-Duże Elo
+Web application to manage DietBox orders
