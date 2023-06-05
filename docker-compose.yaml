@@ -1,0 +1,52 @@
+version: "2"
+services:
+    # www:
+    #     build: .
+    #     ports: 
+    #         - "${WEB_EXTERNAL_PORT}:${WEB_INTERNAL_PORT}"
+    #     volumes:
+    #         - ./www:/var/www/html/
+    #     links:
+    #         - db
+    #     networks:
+    #         - default
+    db:
+        image: mysql
+        ports: 
+            - "${DB_EXTERNAL_PORT}:${DB_INTERNAL_PORT}"
+        environment:
+            MYSQL_DATABASE: ${MYSQL_DATABASE_NAME}
+            MYSQL_USER: ${MYSQL_USER}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+        volumes:
+            - ./dump:/docker-entrypoint-initdb.d
+            - persistent:/var/lib/mysql
+        networks:
+            - default
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links: 
+            - db:db
+        ports:
+            - ${PHPMYADMIN_EXTERNAL_PORT}:${PHPMYADMIN_INTERNAL_PORT}
+        environment:
+            MYSQL_USER: ${MYSQL_USER}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    # mysql-workbench:
+    #     image: lscr.io/linuxserver/mysql-workbench
+    #     links: 
+    #         - db:db
+    #     environment:
+    #         - PUID=1000
+    #         - PGID=1000
+    #         - TZ=Europe/London
+    #     ports:
+    #         - 3000:3000
+    #     cap_add:
+    #         - IPC_LOCK
+    #     restart: "no"
+volumes:
+    persistent:
