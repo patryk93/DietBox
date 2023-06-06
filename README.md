@@ -5,12 +5,11 @@ Web application to manage DietBox orders
 # Views:
 
 # Main page
-
-![image](https://github.com/patryk93/DietBox/assets/26244379/ee195eaa-3434-4e2b-a9ac-e7390c45c79c)
-![image](https://github.com/patryk93/DietBox/assets/26244379/86e858c7-27cb-4362-9863-4acd8f346a1b)
+ file:///home/patryk/Downloads/images/1.png
+ file:///home/patryk/Downloads/images/2.png
 
 # About us
-![image](https://github.com/patryk93/DietBox/assets/26244379/a4e432b2-83c3-40cd-9e2c-e1e234840e99)
+
 
 # Services
 ![image](https://github.com/patryk93/DietBox/assets/26244379/5ba16d3c-85c8-445f-aecd-209804632434)
