@@ -5,6 +5,7 @@ Web application to manage DietBox orders
 # Views:
 
 # Main page
+
 ![image](https://github.com/patryk93/DietBox/assets/26244379/ee195eaa-3434-4e2b-a9ac-e7390c45c79c)
 ![image](https://github.com/patryk93/DietBox/assets/26244379/86e858c7-27cb-4362-9863-4acd8f346a1b)
 
